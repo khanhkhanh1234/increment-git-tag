@@ -1,0 +1,17 @@
+---
+name: Increment Git Tag
+description: Increment the git tag in the repository
+inputs: 
+  version-type:
+    description: The type of version to increment
+    required: true
+    default: patch
+
+outputs:
+  new-version:
+    description: The new version number
+
+runs:
+  using: node12
+  main: action/index.js
+
