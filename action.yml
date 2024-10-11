@@ -2,13 +2,13 @@
 name: Increment Git Tag
 description: Increment the git tag in the repository
 inputs: 
-  version-type:
+  version:
     description: The type of version to increment
     required: true
     default: patch
 
 outputs:
-  new-version:
+  neon:
     description: The new version number
 
 runs:
