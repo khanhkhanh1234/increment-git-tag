@@ -3,7 +3,7 @@ const exec = require('@actions/exec');
 
 async function run() {
     try {
-        const version = core.getInput('version');
+        const version = core.getInput('version-type');
         const src = __dirname;
         await exec.exec(`${src}/git_update.sh -v ${version}`);
     }
