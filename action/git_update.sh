@@ -47,8 +47,9 @@ NEW_TAG="$VNUM1.$VNUM2.$VNUM3"
 echo "Updating to Version: $NEW_TAG"
 
 # Get the current commit hash for the new tag
-GIT_COMMIT = `git rev-parse HEAD`
-NEEDS_TAG=`git describe --contains $GIT_COMMIT 2>/dev/null`
+
+GIT_COMMIT=`git rev-parse HEAD`
+NEEDS_TAG=`git describe --contains $GCM 2>/dev/null`
 
 # Only tag if no tag already 
 if [ -z "$NEEDS_TAG" ]; then
