@@ -1,17 +1,14 @@
 ---
 name: Increment Git Tag
-description: Increment the git tag in the repository
-inputs: 
-  version:
-    description: The type of version to increment
+description: Increments git tag based on the provided version type
+inputs:
+  version-type:
+    description: Provide version type [major, minor, patch]
     required: true
     default: patch
-
 outputs:
-  neon:
-    description: The new version number
-
+  new-version:
+    description: Incremented version based on the input
 runs:
   using: node12
   main: action/index.js
-
